@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "dependencies": {},
   "scripts": {
-    "test": "jest --detectOpenHandles",
-    "ad": "jest --detectOpenHandles",
+    "test": "jest --detectOpenHandles"
   },
   "devDependencies": {
     "@types/jest": "^28.1.4",
