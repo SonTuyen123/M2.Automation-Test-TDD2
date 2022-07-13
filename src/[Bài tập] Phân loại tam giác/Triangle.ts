@@ -5,12 +5,13 @@ export  class Triangle{
            if(this.isTriangleDeu(a, b, c)){
                return "Is Triangle đều"
            }
-           if(this.isTriangleCan(a, b, c) && this.isTriangleVuong(a, b, c)){
-               return "Is Triangle vuông cân"
-           }
-           if(this.isTriangleCan(a, c, b)){
+           if(this.isTriangleCan(a, b, c)){
+               if(this.isTriangleVuong(a, b, c)){
+                   return "Is Triangle vuông cân"
+               }
                return "Is Triangle cân"
            }
+
            if(this.isTriangleVuong(a, b, c)){
                return "Is Triangle vuông"
            }
@@ -22,9 +23,9 @@ export  class Triangle{
     }
 
     private isTriangleVuong(a: number, b: number, c: number) {
-        return (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) ||
-            (Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2)) ||
-            (Math.pow(c, 2) == Math.pow(b, 2) + Math.pow(a, 2));
+        return a == Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2)) ||
+               b == Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2)) ||
+               c == Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2));
     }
 
     private isTriangleCan(a: number, c: number, b: number) {

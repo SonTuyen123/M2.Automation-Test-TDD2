@@ -41,9 +41,9 @@ test('Case 05: Is Triangle đều ',()=>{
     expect(expected.check(a,b,c)).toEqual(message)
 });
 test('Case 06: Is Triangle cân ',()=>{
-    let a :number = 3;
-    let b :number = 3;
-    let c :number = 5;
+    let a :number = 2;
+    let b :number = 2;
+    let c :number = 3;
     let message = 'Is Triangle cân'
     let expected = new Triangle();
     expect(expected.check(a,b,c)).toEqual(message)
@@ -59,7 +59,7 @@ test('Case 07: Is Triangle vuông ',()=>{
 test('Case 07: Is Triangle vuông cân ',()=>{
     let a :number = 1;
     let b :number = 1;
-    let c :number = Math.sqrt(2);
+    let c :number = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2));
     let message = 'Is Triangle vuông cân'
     let expected = new Triangle();
     expect(expected.check(a,b,c)).toEqual(message)
